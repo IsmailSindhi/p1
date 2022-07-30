@@ -1,7 +1,28 @@
-import type { NextPage } from "next";
+import Button from '@components/Button';
+import Clock from '@components/Icons/Clock';
+import { NextPageWithLayout } from '@config/types';
+import Home from '@views/Home';
 
-const Home: NextPage = () => {
-  return <div></div>;
+const HomePage: NextPageWithLayout = () => {
+  return (
+    <>
+      <Home />
+      <Button />
+      <div className="sm:bg-red-500">
+        <Clock />
+        fsafsaf
+      </div>
+    </>
+  );
 };
 
-export default Home;
+// HomePage.getLayout = (page) => {
+//   return (
+//     <div>
+//       <nav>Nav</nav>
+//       {page}
+//     </div>
+//   );
+// };
+
+export default HomePage;
